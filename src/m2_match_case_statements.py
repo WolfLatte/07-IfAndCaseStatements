@@ -1,5 +1,5 @@
 ###############################################################################
-# TODO: 1. (3 pts)
+# DONE - GOT HELP FROM OLIVIA EDWARDS : 1. (3 pts)
 #
 #   Write a function called color_picker() that prints out a message to a user.
 #
@@ -16,9 +16,24 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
-
+def color_picker():
+    command = input("You should enter the name of a color: ")
+    match command:
+            case "red":
+                print("Success! You picked red.")
+            case "blue":
+                print("Success! You picked blue.")
+            case "purple":
+                print("Success! You picked purple.")
+            case "black":
+                print("Success! You picked red...kidding it was black")
+            case "white":
+                print("Success! You picked white")
+            case other:
+                print("Unknown Color!")
+color_picker()            
 ###############################################################################
-# TODO: 2. (3 pts)
+# DONE - GOT HELP FROM OLIVIA EDWARDS : 2. (3 pts)
 #
 #   Write a function called grade() that tells a student what letter grade they
 #   got on an assignment based on the percentage they indicate.
@@ -36,3 +51,19 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def grade ():
+    command = float(input("Enter your percentage grade as a decimal: "))
+    match command:
+        case _ if command >= 0.90:
+            print("You received an A")
+        case _ if command >= 0.80:
+            print("You received a B")
+        case _ if command >= 0.70:
+            print("You received a C")
+        case _ if command >= 0.60:
+            print("You received a D")
+        case _ if command >= 0.50:
+            print("You received a F")
+        case other:
+            print("Invalid Score")
+grade()

@@ -1,7 +1,7 @@
 txt = "The quick brown fox jumps over the lazy dog."
 
 ###############################################################################
-# TODO: 1. (2 pts)
+# DONE: 1. (2 pts)
 #
 #   Write a function called is_positive() that takes one parameter:
 #     - number (float)
@@ -13,9 +13,13 @@ txt = "The quick brown fox jumps over the lazy dog."
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
-
+def is_positive(number):
+    if number == 0 or number > 0:
+        return True
+    elif number > 0:
+        return False    
 ###############################################################################
-# TODO: 2. (2 pts)
+# DONE: 2. (2 pts)
 #
 #   Write a function called contains() that takes two parameters:
 #     - str (string)
@@ -32,9 +36,14 @@ txt = "The quick brown fox jumps over the lazy dog."
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def contains(str,substr):
+    if substr in str:
+        return True
+    return False
 
+print(contains(txt,"dog"))
 ###############################################################################
-# TODO: 3. (3 pts)
+# DONE: 3. (3 pts)
 #
 #   Write a function called display_rating() that takes one parameter:
 #     - rating (float)
@@ -63,3 +72,21 @@ txt = "The quick brown fox jumps over the lazy dog."
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def display_rating(rating):
+    if rating <= 5 and rating >= 4:
+        print(f"You are amazing! You received a score of {rating}!")
+    elif rating < 4 and rating >= 3:
+        print(f"You are almost amazing! You received a score of {rating}!")
+    elif rating < 3 and rating >= 2:
+        print(f"You slightly amazing. You received a score of {rating}!")
+    elif rating < 2 and rating >= 1:
+        print(f"You are not amazing. You received a score of {rating}!")
+    else:
+        print("Invalid score given.")
+
+display_rating(5)
+display_rating(4.5)
+display_rating(3.5)
+display_rating(2.5)
+display_rating(1.5)
+display_rating(6)

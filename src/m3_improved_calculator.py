@@ -1,5 +1,17 @@
+import math
+def add(x, y):
+   return x + y
+
+def subtract(x, y):
+   return x - y
+
+def multiply(x, y):
+   return x * y
+
+def divide(x, y):
+   return x / y
 ###############################################################################
-# TODO: 1. (4 pts)
+# DONE: 1. (4 pts)
 #
 #   In this module, we will improve upon the calculator that we built in the
 #   Session 5 coding exercises.
@@ -39,9 +51,40 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def if_calc():
+   print(f"Greetings, kind stranger!")
 
-###############################################################################
-# TODO: 2. (4 pts)
+   numberx = int(input("Please input an interger:"))
+   numbery = int(input("Please input a second interger:"))
+   user_choice = input("What operation would you like to perform?\n(+) Add\n(-) Subtract\n(*) Multiply\n(/) Division\n")
+       
+   if user_choice == "+":
+      a = add(numberx, numbery)
+      print(a)
+   
+   elif user_choice == "-":
+      s = subtract(numberx, numbery)
+      print(s)
+   
+   elif user_choice == "*":
+      m = multiply(numberx, numbery)
+      print(m)
+   
+   elif user_choice == "/":
+      d = divide(numberx, numbery)
+      print(d)
+
+   else:
+      print("Invalid Operation!")
+      
+   
+
+if_calc()
+
+
+
+###################################### #########################################
+# DONE: 2. (4 pts)
 #
 #   Now, do the same thing that you did in _TODO_ 1, but this time, use case
 #   statements in your solution instead of if statements.
@@ -51,3 +94,28 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def case_calc():
+   numberx = int(input("Please input an interger:"))
+   numbery = int(input("Please input a second interger:"))
+   user_choice = input("What operation would you like to perform?\n(+) Add\n(-) Subtract\n(*) Multiply\n(/) Division\n")
+   
+   match user_choice:
+      case "+":
+         a = add(numberx, numbery)
+         print(a)
+      case "-":
+         s = subtract(numberx, numbery)
+         print(s)
+      case "*":
+         m = multiply(numberx, numbery)
+         print(m)
+      case "/":
+         d = divide(numberx, numbery)
+         print(d)
+      case other:
+         print("Invalid Operation!")
+
+   print("Goodbye Nerd (because you like math)!")
+# I moved the goodbye so it would make sense :D 
+case_calc()
+   
